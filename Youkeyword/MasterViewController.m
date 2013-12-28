@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 
-    RKURL *baseURL = [RKURL URLWithBaseURLString:@"http://localhost:8080/PLNEngine/service"];
+    RKURL *baseURL = [RKURL URLWithBaseURLString:@"http://54.213.142.98:8080/PLNEngine/service"];
     RKObjectManager *objectManager = [RKObjectManager objectManagerWithBaseURL:baseURL];
     objectManager.client.baseURL = baseURL;
 
@@ -63,7 +63,7 @@
 
 - (void)sendRequest
 {
-    NSString *text = @"to study in the MIT with Obama is a very nice thing, Genesis is Wonderfull";
+    NSString *text = @"Luís Alves de Lima e Silva, Duke of Caxias (1803–80) was an army officer, politician and monarchist of the Empire of Brazil. politician and monarchist of the Empire of Brazil. He fought against Portugal during the Brazilian War for Independence, and thereafter remained loyal to the emperors Dom Pedro I and his son, Dom Pedro II (to whom he became a friend and instructor in swordsmanship and horsemanship). He commanded forces that put down uprisings from 1839 to 1845, including the Balaiada and the War of the Ragamuffins. He led the Brazilian army to victory in the Platine War against the Argentine Confederation and in the Paraguayan War against the Paraguayans. Caxias was promoted to army marshal, the army's highest rank, and was the only person made a duke during the 58-year reign of Pedro II. A member of the Reactionary Party (which became the Conservative Party), he was elected senator in 1846 and served as president (prime minister) of the Council of Ministers three times. Historians have regarded Caxias in a positive light and several have ranked him as the greatest Brazilian military officer. He has been designated as the army's protector, and is regarded as the most important figure in its tradition.";
     NSString *language = @"en";
     NSString *name = [NSString stringWithUTF8String:NAME];
     NSString *userId = [NSString stringWithUTF8String:USERID];

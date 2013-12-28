@@ -30,9 +30,15 @@
 		AAE5EF5B186E50F600959A01 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF5A186E50F600959A01 /* Security.framework */; };
 		AAE5EF5D186E510200959A01 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF5C186E510200959A01 /* SystemConfiguration.framework */; };
 		AAE5EF70186E514B00959A01 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF67186E512A00959A01 /* libRestKit.a */; };
+		D22F44C0035354517F1F1F8A /* YKNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4224CF31B5A141915C29 /* YKNote.m */; };
 		D22F47B3C14CAF018A81958B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F453AC5D09DBC1E8FFF21 /* MasterViewController.m */; };
 		D22F47EF343DAE772A4C10AD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F453AC5D09DBC1E8FFF21 /* MasterViewController.m */; };
+		D22F4836FC86A0305E81F354 /* YKNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */; };
+		D22F48F1C9874BA1F57EFB25 /* YKNotesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */; };
+		D22F4A42142FB81A1BB9AE33 /* YKNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */; };
+		D22F4D1487E8A039E0E3FE1D /* YKNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4224CF31B5A141915C29 /* YKNote.m */; };
 		D22F4D6C18885346A26615B3 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F481324A12978AF40CED2 /* VenueCell.m */; };
+		D22F4DED9EF64B8D62C1B09D /* YKNotesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */; };
 		D22F4F53BC67A0D758A0B1A6 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F481324A12978AF40CED2 /* VenueCell.m */; };
 		D22F4F840EC910E8D500084B /* Keywords.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4350A0E55218524AD134 /* Keywords.m */; };
 		D22F4FC58A517D4C4868AF4B /* Keywords.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4350A0E55218524AD134 /* Keywords.m */; };
@@ -120,11 +126,17 @@
 		AAE5EF5C186E510200959A01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AAE5EF5E186E512900959A01 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		D22F41EC30EF14D4D778DAED /* Keywords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keywords.h; sourceTree = "<group>"; };
+		D22F4224CF31B5A141915C29 /* YKNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNote.m; sourceTree = "<group>"; };
+		D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNoteEditorViewController.m; sourceTree = "<group>"; };
 		D22F4350A0E55218524AD134 /* Keywords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keywords.m; sourceTree = "<group>"; };
+		D22F44DE2635BA833D91D11B /* YKNotesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNotesListViewController.h; sourceTree = "<group>"; };
 		D22F453AC5D09DBC1E8FFF21 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		D22F481324A12978AF40CED2 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		D22F4918AE9ECD0D13A2E54D /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		D22F49BAD54239A67D60FA04 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		D22F4B19706C8EF1C21ED986 /* YKNoteEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNoteEditorViewController.h; sourceTree = "<group>"; };
+		D22F4E3307C0C2357A71D6C8 /* YKNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNote.h; sourceTree = "<group>"; };
+		D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNotesListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +225,7 @@
 				D22F481324A12978AF40CED2 /* VenueCell.m */,
 				D22F4918AE9ECD0D13A2E54D /* VenueCell.h */,
 				D22F49BAD54239A67D60FA04 /* MasterViewController.h */,
+				D22F4FC58C77A12EA45C30E1 /* Notes */,
 			);
 			path = Youkeyword;
 			sourceTree = "<group>";
@@ -265,6 +278,19 @@
 				AAE5EF6F186E512A00959A01 /* RestKitResources.bundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D22F4FC58C77A12EA45C30E1 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */,
+				D22F44DE2635BA833D91D11B /* YKNotesListViewController.h */,
+				D22F4224CF31B5A141915C29 /* YKNote.m */,
+				D22F4E3307C0C2357A71D6C8 /* YKNote.h */,
+				D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */,
+				D22F4B19706C8EF1C21ED986 /* YKNoteEditorViewController.h */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +443,9 @@
 				D22F4F840EC910E8D500084B /* Keywords.m in Sources */,
 				D22F47EF343DAE772A4C10AD /* MasterViewController.m in Sources */,
 				D22F4D6C18885346A26615B3 /* VenueCell.m in Sources */,
+				D22F48F1C9874BA1F57EFB25 /* YKNotesListViewController.m in Sources */,
+				D22F4D1487E8A039E0E3FE1D /* YKNote.m in Sources */,
+				D22F4836FC86A0305E81F354 /* YKNoteEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +457,9 @@
 				D22F4FC58A517D4C4868AF4B /* Keywords.m in Sources */,
 				D22F47B3C14CAF018A81958B /* MasterViewController.m in Sources */,
 				D22F4F53BC67A0D758A0B1A6 /* VenueCell.m in Sources */,
+				D22F4DED9EF64B8D62C1B09D /* YKNotesListViewController.m in Sources */,
+				D22F44C0035354517F1F1F8A /* YKNote.m in Sources */,
+				D22F4A42142FB81A1BB9AE33 /* YKNoteEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
