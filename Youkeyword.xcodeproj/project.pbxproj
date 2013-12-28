@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAC03ABF186F4DDF00A13F13 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF67186E512A00959A01 /* libRestKit.a */; };
+		AAC03AC0186F4E0200A13F13 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF5C186E510200959A01 /* SystemConfiguration.framework */; };
+		AAC03AC1186F4E0E00A13F13 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF5A186E50F600959A01 /* Security.framework */; };
+		AAC03AC2186F4E1900A13F13 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF58186E50EF00959A01 /* MobileCoreServices.framework */; };
+		AAC03AC3186F4E2500A13F13 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF56186E50E100959A01 /* libxml2.dylib */; };
+		AAC03AC4186F4E2F00A13F13 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF54186E50D400959A01 /* CoreData.framework */; };
+		AAC03AC5186F4E3D00A13F13 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF52186E50AD00959A01 /* CFNetwork.framework */; };
+		AAC03AC6186F4E4A00A13F13 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF50186E50A400959A01 /* QuartzCore.framework */; };
 		AAE5EF18186E4F6400959A01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF17186E4F6400959A01 /* Foundation.framework */; };
 		AAE5EF1A186E4F6400959A01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF19186E4F6400959A01 /* CoreGraphics.framework */; };
 		AAE5EF1C186E4F6400959A01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF1B186E4F6400959A01 /* UIKit.framework */; };
@@ -170,6 +178,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC03AC6186F4E4A00A13F13 /* QuartzCore.framework in Frameworks */,
+				AAC03AC5186F4E3D00A13F13 /* CFNetwork.framework in Frameworks */,
+				AAC03AC4186F4E2F00A13F13 /* CoreData.framework in Frameworks */,
+				AAC03AC3186F4E2500A13F13 /* libxml2.dylib in Frameworks */,
+				AAC03AC2186F4E1900A13F13 /* MobileCoreServices.framework in Frameworks */,
+				AAC03AC1186F4E0E00A13F13 /* Security.framework in Frameworks */,
+				AAC03AC0186F4E0200A13F13 /* SystemConfiguration.framework in Frameworks */,
+				AAC03ABF186F4DDF00A13F13 /* libRestKit.a in Frameworks */,
 				AAE5EF3A186E4F6400959A01 /* XCTest.framework in Frameworks */,
 				AAE5EF3C186E4F6400959A01 /* UIKit.framework in Frameworks */,
 				AAE5EF3B186E4F6400959A01 /* Foundation.framework in Frameworks */,
@@ -658,7 +674,18 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+				);
 				INFOPLIST_FILE = "YoukeywordTests/YoukeywordTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -677,7 +704,18 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Youkeyword/Youkeyword-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
+				);
 				INFOPLIST_FILE = "YoukeywordTests/YoukeywordTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
