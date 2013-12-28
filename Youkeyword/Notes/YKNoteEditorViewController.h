@@ -6,6 +6,7 @@
 #import <UIKit/UIKit.h>
 
 @class YKNote;
+@class MasterViewController;
 
 @interface YKNoteEditorViewController : UIViewController
 

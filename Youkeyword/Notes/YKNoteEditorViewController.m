@@ -6,6 +6,7 @@
 #import "YKNoteEditorViewController.h"
 
 #import "YKNote.h"
+#import "MasterViewController.h"
 
 @interface YKNoteEditorViewController () <UITextViewDelegate>
 
@@ -30,6 +31,13 @@
 {
     // copy the updated note text to the underlying model.
     _note.contents = textView.text;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"loadKeywords"]){
+        MasterViewController *controller = (MasterViewController *)segue.destinationViewController;
+        controller.textToAnalyze = self.textView.text ;
+    }
 }
 
 @end

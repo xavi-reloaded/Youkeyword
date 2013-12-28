@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController <RKObjectLoaderDelegate>
+@interface MasterViewController : UITableViewController
+
+@property(nonatomic) NSString *textToAnalyze;
 
 @end

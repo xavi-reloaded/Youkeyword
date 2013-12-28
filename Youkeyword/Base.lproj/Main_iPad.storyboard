@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Master View Controller - Root View Controller-->
+        <!--Master View Controller - Text Analysis-->
         <scene sceneID="SDI-rp-Cdw">
             <objects>
                 <tableViewController id="X8L-pf-J1g" customClass="MasterViewController" sceneMemberID="viewController">
@@ -43,11 +43,11 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VK3-ee-1B1"/>
+                    <navigationItem key="navigationItem" title="Text Analysis" id="VK3-ee-1B1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edP-BH-P6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="-453"/>
+            <point key="canvasLocation" x="4318" y="-851"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eTZ-Pt-ODZ">
@@ -66,7 +66,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qT4-6b-3uo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="753"/>
+            <point key="canvasLocation" x="731" y="-303"/>
         </scene>
         <!--Notes List View Controller - Fish-->
         <scene sceneID="TAa-1d-ynA">
@@ -109,7 +109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrb-Sx-sbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845" y="113"/>
+            <point key="canvasLocation" x="2511" y="-851"/>
         </scene>
         <!--Note Editor View Controller - Notes-->
         <scene sceneID="J2V-22-0eY">
@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQs-B5-yWX">
-                                <rect key="frame" x="1" y="67" width="768" height="957"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="909"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -134,14 +134,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Note" id="Pq3-dI-idb"/>
+                    <navigationItem key="navigationItem" title="Write some text and..." id="Pq3-dI-idb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xaQ-wd-zbt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hvs-dU-PbJ">
+                                <rect key="frame" x="582" y="5" width="170" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Analyze it !"/>
+                                <connections>
+                                    <segue destination="X8L-pf-J1g" kind="push" identifier="loadKeywords" id="o3I-EF-i4v"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textView" destination="zQs-B5-yWX" id="uL1-Ma-m23"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4v-4O-Nbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3688" y="113"/>
+            <point key="canvasLocation" x="3354" y="-851"/>
         </scene>
         <!--Navigation Controller - Open Text-->
         <scene sceneID="UuO-5t-SLo">
@@ -157,7 +169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLk-Do-adF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="113"/>
+            <point key="canvasLocation" x="1659" y="-851"/>
         </scene>
         <!--View Controller - Site-->
         <scene sceneID="OKB-UO-EcF">
@@ -176,22 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccf-ra-Lco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="1305"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lB5-nh-jg8">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="pX4-KC-oGf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v7x-Un-6Qk">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="X8L-pf-J1g" kind="relationship" relationship="rootViewController" id="OV0-tN-hUU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QAl-rS-WhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-754" y="-454"/>
+            <point key="canvasLocation" x="1667" y="265"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -200,6 +197,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3Jc-7H-cH3"/>
+        <segue reference="MeN-gp-dDC"/>
     </inferredMetricsTieBreakers>
 </document>
