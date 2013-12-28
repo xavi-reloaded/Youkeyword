@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *namedEntity;
 @property (strong, nonatomic) IBOutlet UILabel *checkinsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *categoriesLabel;
+@property (strong, nonatomic) IBOutlet UILabel *meaningsLabel;
 
 @end

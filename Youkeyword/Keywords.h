@@ -5,10 +5,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class YKMeanings;
+@class YKSearchResponse;
+
 
 @interface Keywords : NSObject
 
 @property (nonatomic, strong) NSString *lemma;
 @property (nonatomic, strong) NSString *namedEntity;
+@property (nonatomic, strong) NSMutableArray *categories;
+@property (nonatomic, strong) NSMutableArray *meanings;
+@property (nonatomic, strong) NSMutableArray *searchResponse;
 
 @end

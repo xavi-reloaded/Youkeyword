@@ -10,6 +10,7 @@
 #import "MasterViewController.h"
 #import "Keywords.h"
 #import "VenueCell.h"
+#import "YKMeanings.h"
 
 #define NAME "iosuser-xavi"
 #define USERID "IOS-APP"
@@ -126,6 +127,8 @@
     cell.nameLabel.text = keywords.lemma;
     NSString *namedEntity = ([keywords.namedEntity isEqualToString:@"NOT_AN_ENTITY"]) ? @"" : keywords.namedEntity;
     cell.namedEntity.text = namedEntity;
+    cell.meaningsLabel.text = keywords.meanings;
+    cell.categoriesLabel.text = keywords.categories;
     return cell;
 }
 

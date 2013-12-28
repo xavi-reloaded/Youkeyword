@@ -4,6 +4,8 @@
 //
 
 #import "Keywords.h"
+#import "YKMeanings.h"
+#import "YKSearchResponse.h"
 
 
 @implementation Keywords
