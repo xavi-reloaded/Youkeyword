@@ -39,7 +39,7 @@
 - (void)test_getResponseFromServer
 {
     NSString *actual = [self.sut responseFromServer];
-    NSString *espected = @"ultra weke inendel";
+    NSString *espected = @"weke";
     XCTAssertEqual(actual,espected,@"should return valid json");
 }
 
