@@ -9,4 +9,7 @@
 @implementation YoukeywordService {
 
 }
+- (NSString *)responseFromServer {
+    return @"weke";
+}
 @end

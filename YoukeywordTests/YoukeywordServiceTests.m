@@ -8,8 +8,11 @@
 
 #import <XCTest/XCTest.h>
 #import "DTRequestVerifier.h"
+#import "YoukeywordService.h"
 
 @interface YoukeywordServiceTests : XCTestCase
+
+@property (nonatomic, strong) YoukeywordService *sut;
 
 @end
 
@@ -18,7 +21,7 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.sut = [[YoukeywordService alloc] init];
 }
 
 - (void)tearDown
@@ -27,9 +30,17 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)test_YoukeywordService_isNotNull
 {
-    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertNotNil(self.sut, @"should not be null");
+}
+
+
+- (void)test_getResponseFromServer
+{
+    NSString *actual = [self.sut responseFromServer];
+    NSString *espected = @"ultra weke inendel";
+    XCTAssertEqual(actual,espected,@"should return valid json");
 }
 
 @end

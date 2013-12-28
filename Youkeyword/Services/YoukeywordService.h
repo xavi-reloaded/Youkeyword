@@ -7,4 +7,15 @@
 
 
 @interface YoukeywordService : NSObject
+{
+    // Protected instance variables
+
+}
+
++ (void)setBaseUrl:(NSString *)url;
+
+@property(nonatomic, assign) NSString *baseurl;
+
+- (NSString *)responseFromServer;
+
 @end
