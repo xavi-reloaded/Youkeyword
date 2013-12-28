@@ -38,17 +38,27 @@
 		AAE5EF5B186E50F600959A01 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF5A186E50F600959A01 /* Security.framework */; };
 		AAE5EF5D186E510200959A01 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF5C186E510200959A01 /* SystemConfiguration.framework */; };
 		AAE5EF70186E514B00959A01 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF67186E512A00959A01 /* libRestKit.a */; };
+		D22F40857356195145F264E3 /* HTTPMethodHostSpecs.m.bak in Sources */ = {isa = PBXBuildFile; fileRef = D22F4BA959211B83D700113E /* HTTPMethodHostSpecs.m.bak */; };
+		D22F4149EF1C938180F4D195 /* YoukeywordService.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4E9E5501D51DB34D9BA6 /* YoukeywordService.m */; };
+		D22F43A811F8CF839992A602 /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4B390B5E703A4F8DB1A1 /* DTRequestVerifier.m */; };
 		D22F43BFCF690DA417D69C5A /* YKMeanings.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4A879731E89D35DAFAFD /* YKMeanings.m */; };
 		D22F43C5E41F3FA6939EE3A2 /* YKSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4EEABEA80087EF87C143 /* YKSearchResponse.m */; };
+		D22F444456E4A6185A2061AC /* YoukeywordServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4FBE0F0A39B84251703B /* YoukeywordServiceTests.m */; };
+		D22F447E93CFBB989D1B4AB4 /* RequestVerifierTestCase.m.bak in Sources */ = {isa = PBXBuildFile; fileRef = D22F43EBF0B930A513C463D5 /* RequestVerifierTestCase.m.bak */; };
 		D22F44C0035354517F1F1F8A /* YKNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4224CF31B5A141915C29 /* YKNote.m */; };
+		D22F473796150D7F96049204 /* HTTPMethodHostSpecs.m.bak in Sources */ = {isa = PBXBuildFile; fileRef = D22F4BA959211B83D700113E /* HTTPMethodHostSpecs.m.bak */; };
 		D22F47B3C14CAF018A81958B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F453AC5D09DBC1E8FFF21 /* MasterViewController.m */; };
 		D22F47EF343DAE772A4C10AD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F453AC5D09DBC1E8FFF21 /* MasterViewController.m */; };
 		D22F4836FC86A0305E81F354 /* YKNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */; };
+		D22F48DBEA61A41AE269E3A0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE5EF39186E4F6400959A01 /* XCTest.framework */; };
+		D22F48DDAA5A226ACD2FBF11 /* YoukeywordService.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4E9E5501D51DB34D9BA6 /* YoukeywordService.m */; };
 		D22F48F1C9874BA1F57EFB25 /* YKNotesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */; };
+		D22F4925238C0F6D9BC99084 /* RequestVerifierTestCase.m.bak in Sources */ = {isa = PBXBuildFile; fileRef = D22F43EBF0B930A513C463D5 /* RequestVerifierTestCase.m.bak */; };
 		D22F4A42142FB81A1BB9AE33 /* YKNoteEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */; };
 		D22F4D1487E8A039E0E3FE1D /* YKNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4224CF31B5A141915C29 /* YKNote.m */; };
 		D22F4D3197DA0342F1AAB49A /* YKSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4EEABEA80087EF87C143 /* YKSearchResponse.m */; };
 		D22F4D6C18885346A26615B3 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F481324A12978AF40CED2 /* VenueCell.m */; };
+		D22F4DD04B0D40AC7FC4CB89 /* DTRequestVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4B390B5E703A4F8DB1A1 /* DTRequestVerifier.m */; };
 		D22F4DED9EF64B8D62C1B09D /* YKNotesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */; };
 		D22F4E89348FF5574EDBD25D /* YKMeanings.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F4A879731E89D35DAFAFD /* YKMeanings.m */; };
 		D22F4F53BC67A0D758A0B1A6 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D22F481324A12978AF40CED2 /* VenueCell.m */; };
@@ -137,10 +147,12 @@
 		AAE5EF5A186E50F600959A01 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		AAE5EF5C186E510200959A01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AAE5EF5E186E512900959A01 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		D22F4001A455026573FA8A45 /* YoukeywordService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoukeywordService.h; sourceTree = "<group>"; };
 		D22F41EC30EF14D4D778DAED /* Keywords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keywords.h; sourceTree = "<group>"; };
 		D22F4224CF31B5A141915C29 /* YKNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNote.m; sourceTree = "<group>"; };
 		D22F42A5AE9D16B20FA52898 /* YKNoteEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNoteEditorViewController.m; sourceTree = "<group>"; };
 		D22F4350A0E55218524AD134 /* Keywords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keywords.m; sourceTree = "<group>"; };
+		D22F43EBF0B930A513C463D5 /* RequestVerifierTestCase.m.bak */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.bak; path = RequestVerifierTestCase.m.bak; sourceTree = "<group>"; };
 		D22F44DE2635BA833D91D11B /* YKNotesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNotesListViewController.h; sourceTree = "<group>"; };
 		D22F453AC5D09DBC1E8FFF21 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		D22F47006FBF44D171506F42 /* YKMeanings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKMeanings.h; sourceTree = "<group>"; };
@@ -150,9 +162,15 @@
 		D22F4A879731E89D35DAFAFD /* YKMeanings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKMeanings.m; sourceTree = "<group>"; };
 		D22F4A8F0E498D61C3DCA01B /* YKSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YKSearchResponse.h; path = Data/YKSearchResponse.h; sourceTree = "<group>"; };
 		D22F4B19706C8EF1C21ED986 /* YKNoteEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNoteEditorViewController.h; sourceTree = "<group>"; };
+		D22F4B390B5E703A4F8DB1A1 /* DTRequestVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRequestVerifier.m; sourceTree = "<group>"; };
+		D22F4BA959211B83D700113E /* HTTPMethodHostSpecs.m.bak */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.bak; path = HTTPMethodHostSpecs.m.bak; sourceTree = "<group>"; };
+		D22F4C1595343F77DDDE4295 /* DTRequestVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRequestVerifier.h; sourceTree = "<group>"; };
+		D22F4E0332F6D7D68543323D /* RequestVerifierTestCase.h.bak */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.bak; path = RequestVerifierTestCase.h.bak; sourceTree = "<group>"; };
 		D22F4E3307C0C2357A71D6C8 /* YKNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKNote.h; sourceTree = "<group>"; };
+		D22F4E9E5501D51DB34D9BA6 /* YoukeywordService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoukeywordService.m; sourceTree = "<group>"; };
 		D22F4EBBB8BAD05FE1334F07 /* YKNotesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKNotesListViewController.m; sourceTree = "<group>"; };
 		D22F4EEABEA80087EF87C143 /* YKSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YKSearchResponse.m; path = Data/YKSearchResponse.m; sourceTree = "<group>"; };
+		D22F4FBE0F0A39B84251703B /* YoukeywordServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoukeywordServiceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +207,7 @@
 				AAE5EF3A186E4F6400959A01 /* XCTest.framework in Frameworks */,
 				AAE5EF3C186E4F6400959A01 /* UIKit.framework in Frameworks */,
 				AAE5EF3B186E4F6400959A01 /* Foundation.framework in Frameworks */,
+				D22F48DBEA61A41AE269E3A0 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +269,7 @@
 				D22F4918AE9ECD0D13A2E54D /* VenueCell.h */,
 				D22F49BAD54239A67D60FA04 /* MasterViewController.h */,
 				D22F4FC58C77A12EA45C30E1 /* Notes */,
+				D22F4EF11E3BB65640D2681C /* Services */,
 			);
 			path = Youkeyword;
 			sourceTree = "<group>";
@@ -270,6 +290,9 @@
 			children = (
 				AAE5EF45186E4F6400959A01 /* YoukeywordTests.m */,
 				AAE5EF40186E4F6400959A01 /* Supporting Files */,
+				D22F4FBE0F0A39B84251703B /* YoukeywordServiceTests.m */,
+				D22F4A6D690812EEA142B3DA /* DTRequestVerifier */,
+				D22F4BA959211B83D700113E /* HTTPMethodHostSpecs.m.bak */,
 			);
 			path = YoukeywordTests;
 			sourceTree = "<group>";
@@ -306,6 +329,26 @@
 				AAE5EF6F186E512A00959A01 /* RestKitResources.bundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D22F4A6D690812EEA142B3DA /* DTRequestVerifier */ = {
+			isa = PBXGroup;
+			children = (
+				D22F4C1595343F77DDDE4295 /* DTRequestVerifier.h */,
+				D22F4B390B5E703A4F8DB1A1 /* DTRequestVerifier.m */,
+				D22F43EBF0B930A513C463D5 /* RequestVerifierTestCase.m.bak */,
+				D22F4E0332F6D7D68543323D /* RequestVerifierTestCase.h.bak */,
+			);
+			path = DTRequestVerifier;
+			sourceTree = "<group>";
+		};
+		D22F4EF11E3BB65640D2681C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D22F4E9E5501D51DB34D9BA6 /* YoukeywordService.m */,
+				D22F4001A455026573FA8A45 /* YoukeywordService.h */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D22F4FC58C77A12EA45C30E1 /* Notes */ = {
@@ -476,6 +519,10 @@
 				D22F4836FC86A0305E81F354 /* YKNoteEditorViewController.m in Sources */,
 				D22F4E89348FF5574EDBD25D /* YKMeanings.m in Sources */,
 				D22F43C5E41F3FA6939EE3A2 /* YKSearchResponse.m in Sources */,
+				D22F48DDAA5A226ACD2FBF11 /* YoukeywordService.m in Sources */,
+				D22F4DD04B0D40AC7FC4CB89 /* DTRequestVerifier.m in Sources */,
+				D22F4925238C0F6D9BC99084 /* RequestVerifierTestCase.m.bak in Sources */,
+				D22F473796150D7F96049204 /* HTTPMethodHostSpecs.m.bak in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +539,11 @@
 				D22F4A42142FB81A1BB9AE33 /* YKNoteEditorViewController.m in Sources */,
 				D22F43BFCF690DA417D69C5A /* YKMeanings.m in Sources */,
 				D22F4D3197DA0342F1AAB49A /* YKSearchResponse.m in Sources */,
+				D22F4149EF1C938180F4D195 /* YoukeywordService.m in Sources */,
+				D22F444456E4A6185A2061AC /* YoukeywordServiceTests.m in Sources */,
+				D22F43A811F8CF839992A602 /* DTRequestVerifier.m in Sources */,
+				D22F447E93CFBB989D1B4AB4 /* RequestVerifierTestCase.m.bak in Sources */,
+				D22F40857356195145F264E3 /* HTTPMethodHostSpecs.m.bak in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
