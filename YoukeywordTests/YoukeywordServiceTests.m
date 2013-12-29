@@ -39,6 +39,14 @@
     XCTAssertNotNil(self.sut, @"should not be null");
 }
 
+- (void)test_YoukeywordService_withNullConstructor
+{
+    self.sut = [[YoukeywordService alloc] init];
+    XCTAssertNotNil(self.sut, @"should not be null");
+}
+
+
+
 - (void)test_getResponseFromServer_anemycTest_and_I_know_it
 {
     NSString *text = @"Luís Alves de Lima e Silva";

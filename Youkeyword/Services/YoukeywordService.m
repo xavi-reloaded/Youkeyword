@@ -14,6 +14,10 @@
 
 @synthesize objectManager,baseURL,responseData;
 
+- (id)init {
+    return [self init:self];
+}
+
 - (id)init:(NSObject *)delegateClass {
     self.delegateClass = delegateClass;
     return [self initWithObjectManager:@"http://54.213.142.98:8080/PLNEngine/service"];;
