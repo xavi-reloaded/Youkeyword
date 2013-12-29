@@ -62,7 +62,7 @@
 {
     RKObjectManager *objectManager = [self.sut objectManager];
     NSURL *actual = [[objectManager baseURL] baseURL];
-    NSString *expected = @"http://54.213.142.98:8080/PLNEngine/service";
+    NSString *expected = @"http://localhost:8080/PLNEngine/service";
     NSString *formattedActual = [NSString stringWithFormat:@"%@", actual];
     XCTAssertTrue([formattedActual isEqualToString:expected],@"String are not equals %@ %@",formattedActual,expected);
 }
@@ -85,10 +85,10 @@
     XCTAssertNotNil(actual,@"mapping is not working %@",actual);
 }
 
-- (void)test_configureMappingForObjectManager
+- (void)test_integrationTest
 {
-    RKObjectManager *actual = [self.sut configureMappingForObjectManager:self.sut.objectManager];
-    XCTAssertNotNil(actual,@"mapping is not working %@",actual);
+    YoukeywordService *service = [[YoukeywordService alloc] init:[self dummyDelegateClass]];
+    [service loadYoukeywordObjectsFromText:@"this is a test with MIT"];
 }
 
 

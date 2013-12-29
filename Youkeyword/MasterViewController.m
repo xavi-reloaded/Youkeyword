@@ -7,6 +7,7 @@
 //
 
 #import <RestKit/RestKit.h>
+#import <RestKit/JSONKit.h>
 #import "MasterViewController.h"
 #import "Keywords.h"
 #import "VenueCell.h"
@@ -78,7 +79,7 @@
     NSString *namedEntity = ([keywords.namedEntity isEqualToString:@"NOT_AN_ENTITY"]) ? @"" : keywords.namedEntity;
     cell.namedEntity.text = namedEntity;
     cell.meaningsLabel.text = keywords.meanings;
-    cell.categoriesLabel.text = keywords.categories;
+    cell.categoriesLabel.text = [keywords.categories JSONString];
     return cell;
 }
 
