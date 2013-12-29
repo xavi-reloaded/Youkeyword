@@ -17,8 +17,10 @@
 
 @property(nonatomic, strong) RKURL *baseURL;
 @property(nonatomic, strong) RKObjectManager *objectManager;
+@property (strong, nonatomic) NSArray *responseData;
 
-- (NSString *)responseFromServer;
+- (NSString *)loadYoukeywordObjectsArResourcePath:(NSDictionary *)queryParams;
 - (NSDictionary *)getQueryParams:(NSString *)text language:(NSString *)language name:(NSString *)name userId:(NSString *)userId;
+- (RKObjectManager *)configureMappingForObjectManager:(RKObjectManager *)manager;
 
 @end

@@ -36,11 +36,15 @@
     XCTAssertNotNil(self.sut, @"should not be null");
 }
 
-- (void)test_getResponseFromServer
+- (void)test_getResponseFromServer_anemycTest_and_I_know_it
 {
-    NSString *actual = [self.sut responseFromServer];
-    NSString *espected = @"weke";
-    XCTAssertEqual(actual,espected,@"should return valid json");
+    NSString *text = @"Luís Alves de Lima e Silva";
+    NSString *language = @"en";
+    NSString *name = @"name";
+    NSString *userId = @"userId";
+
+    NSDictionary *queryParams = [self.sut getQueryParams:text language:language name:name userId:userId];
+    [self.sut loadYoukeywordObjectsArResourcePath:queryParams];
 }
 
 - (void)test_objectManager_baseURLIsCorrect
@@ -63,6 +67,13 @@
     NSString *expected = @"hola";
     XCTAssertTrue([expected isEqualToString:formattedActual],@"String are not equals %@ %@",formattedActual,expected);
 }
+
+- (void)test_configureMappingForObjectManager
+{
+    RKObjectManager *actual = [self.sut configureMappingForObjectManager:self.sut.objectManager];
+    XCTAssertNotNil(actual,@"mapping is not working %@",actual);
+}
+
 
 
 @end
