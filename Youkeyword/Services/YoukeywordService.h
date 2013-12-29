@@ -19,5 +19,6 @@
 @property(nonatomic, strong) RKObjectManager *objectManager;
 
 - (NSString *)responseFromServer;
+- (NSDictionary *)getQueryParams:(NSString *)text language:(NSString *)language name:(NSString *)name userId:(NSString *)userId;
 
 @end

@@ -6,6 +6,7 @@
 #import <RestKit/RKURL.h>
 #import <RestKit/RKObjectManager.h>
 #import "YoukeywordService.h"
+#import "Keywords.h"
 
 
 @implementation YoukeywordService {}
@@ -25,12 +26,40 @@
         baseURL = [RKURL URLWithBaseURLString:baseURLString];
         objectManager = [RKObjectManager objectManagerWithBaseURL:baseURL];
         objectManager.client.baseURL = baseURL;
+        objectManager = [self configureMappingForObjectManager:objectManager];
     }
     return self;
 }
 
+- (RKObjectManager *)configureMappingForObjectManager:(RKObjectManager *)manager {
+    RKObjectMapping *keywordMapping = [RKObjectMapping mappingForClass:[Keywords class]];
+    [keywordMapping mapKeyPathsToAttributes:@"lemma", @"lemma", @"namedEntity", @"namedEntity", nil];
+    [manager.mappingProvider setMapping:keywordMapping forKeyPath:@""];
+    return manager;
+}
+
 
 - (NSString *)responseFromServer {
-    return @"weke";
+    NSString *text = @"Luís Alves de Lima e Silva";
+    NSString *language = @"en";
+    NSString *name = @"name";
+    NSString *userId = @"userId";
+
+
+    NSDictionary *queryParams = [self getQueryParams:text language:language name:name userId:userId];
+    /*
+    RKURL *URL = [RKURL URLWithBaseURL:[objectManager baseURL] resourcePath:@"/plnKeywordService" queryParameters:queryParams];
+
+    NSLog(@"URL: %@", [URL absoluteString]);
+    NSLog(@"resourcePath: %@", [URL resourcePath]);
+    NSLog(@"query: %@", [URL query]);
+
+    NSString *const path = [NSString stringWithFormat:@"%@?%@", [URL resourcePath], [URL query]];
+    [objectManager loadObjectsAtResourcePath:path delegate:self];*/
+    return @"asdf";
+}
+
+- (NSDictionary *)getQueryParams:(NSString *)text language:(NSString *)language name:(NSString *)name userId:(NSString *)userId {
+    return [NSDictionary dictionaryWithObjectsAndKeys:text, @"w", language, @"l", name, @"name", userId, @"id", nil];
 }
 @end
