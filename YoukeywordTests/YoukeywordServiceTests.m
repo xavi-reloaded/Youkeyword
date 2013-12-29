@@ -85,6 +85,12 @@
     XCTAssertNotNil(actual,@"mapping is not working %@",actual);
 }
 
+- (void)test_configureMappingForObjectManager
+{
+    RKObjectManager *actual = [self.sut configureMappingForObjectManager:self.sut.objectManager];
+    XCTAssertNotNil(actual,@"mapping is not working %@",actual);
+}
+
 
 @end
 
