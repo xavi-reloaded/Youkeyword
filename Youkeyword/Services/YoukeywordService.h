@@ -5,6 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class RKURL;
+@class RKObjectManager;
+
 
 @interface YoukeywordService : NSObject
 {
@@ -12,9 +15,8 @@
 
 }
 
-+ (void)setBaseUrl:(NSString *)url;
-
-@property(nonatomic, assign) NSString *baseurl;
+@property(nonatomic, strong) RKURL *baseURL;
+@property(nonatomic, strong) RKObjectManager *objectManager;
 
 - (NSString *)responseFromServer;
 

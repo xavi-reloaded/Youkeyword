@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <RestKit/RKObjectManager.h>
 #import "DTRequestVerifier.h"
 #import "YoukeywordService.h"
 
@@ -41,6 +42,16 @@
     NSString *actual = [self.sut responseFromServer];
     NSString *espected = @"weke";
     XCTAssertEqual(actual,espected,@"should return valid json");
+}
+
+- (void)test_YoukeywordService_objectManager_baseURLIsCorrect
+{
+    RKObjectManager *objectManager = [self.sut objectManager];
+    NSURL *actual = [[objectManager baseURL] baseURL];
+    NSString *expected = @"http://54.213.142.98:8080/PLNEngine/service";
+    NSString *formattedActual = [NSString stringWithFormat:@"%@", actual];
+    XCTAssertTrue([formattedActual isEqualToString:expected],@"String are not equals %@ %@",formattedActual,expected);
+
 }
 
 @end
