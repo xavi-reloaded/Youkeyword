@@ -19,7 +19,12 @@
 @property(nonatomic, strong) RKObjectManager *objectManager;
 @property (strong, nonatomic) NSArray *responseData;
 
+@property(nonatomic, strong) NSObject *delegateClass;
+
+- (id)init:(NSObject *)delegateClass;
+
 - (NSString *)loadYoukeywordObjectsArResourcePath:(NSDictionary *)queryParams;
+- (NSString *)loadYoukeywordObjectsFromText:(NSString *)text;
 - (NSDictionary *)getQueryParams:(NSString *)text language:(NSString *)language name:(NSString *)name userId:(NSString *)userId;
 - (RKObjectManager *)configureMappingForObjectManager:(RKObjectManager *)manager;
 

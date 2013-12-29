@@ -7,15 +7,16 @@
 #import <RestKit/RKObjectManager.h>
 #import "YoukeywordService.h"
 #import "Keywords.h"
+#import "DummyDelegateClass.h"
 
 
 @implementation YoukeywordService {}
 
 @synthesize objectManager,baseURL,responseData;
 
-- (id)init
-{
-    return [self initWithObjectManager:@"http://54.213.142.98:8080/PLNEngine/service"];
+- (id)init:(NSObject *)delegateClass {
+    self.delegateClass = delegateClass;
+    return [self initWithObjectManager:@"http://54.213.142.98:8080/PLNEngine/service"];;
 }
 
 - (id)initWithObjectManager:(NSString *)baseURLString {
@@ -38,16 +39,27 @@
 }
 
 
+
+- (void)loadYoukeywordObjectsFromText:(NSString *)text {
+    NSString *const language = @"en";
+    NSString *const name = @"name";
+    NSString *const userId = @"userid";
+    NSDictionary *queryParams = [self getQueryParams:text language:language name:name userId:userId];
+    [self loadYoukeywordObjectsArResourcePath:queryParams];
+}
+
 - (void)loadYoukeywordObjectsArResourcePath:(NSDictionary *)queryParams {
     objectManager = [RKObjectManager sharedManager];
     RKURL *URL = [RKURL URLWithBaseURL:[objectManager baseURL] resourcePath:@"/plnKeywordService" queryParameters:queryParams];
     NSString *const path = [NSString stringWithFormat:@"%@?%@", [URL resourcePath], [URL query]];
-    [objectManager loadObjectsAtResourcePath:path delegate:self];
+    [objectManager loadObjectsAtResourcePath:path delegate:[self delegateClass]];
 }
 
 - (NSDictionary *)getQueryParams:(NSString *)text language:(NSString *)language name:(NSString *)name userId:(NSString *)userId {
     return [NSDictionary dictionaryWithObjectsAndKeys:text, @"w", language, @"l", name, @"name", userId, @"id", nil];
 }
+
+
 
 #pragma mark - RKObjectLoaderDelegate
 

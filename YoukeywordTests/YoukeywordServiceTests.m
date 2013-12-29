@@ -10,11 +10,13 @@
 #import <RestKit/RKObjectManager.h>
 #import "DTRequestVerifier.h"
 #import "YoukeywordService.h"
+#import "DummyDelegateClass.h"
 
 @interface YoukeywordServiceTests : XCTestCase
 
 @property (nonatomic, strong) YoukeywordService *sut;
 
+@property(nonatomic, strong) DummyDelegateClass *dummyDelegateClass;
 @end
 
 @implementation YoukeywordServiceTests
@@ -22,7 +24,8 @@
 - (void)setUp
 {
     [super setUp];
-    self.sut = [[YoukeywordService alloc] init];
+    self.dummyDelegateClass = [[DummyDelegateClass alloc] init];
+    self.sut = [[YoukeywordService alloc] init:self.dummyDelegateClass];
 }
 
 - (void)tearDown
@@ -75,5 +78,38 @@
 }
 
 
-
 @end
+
+/*
+
+
+    RKURL *baseURL = [RKURL URLWithBaseURLString:@"http://54.213.142.98:8080/PLNEngine/service"];
+    RKObjectManager *objectManager = [RKObjectManager objectManagerWithBaseURL:baseURL];
+    objectManager.client.baseURL = baseURL;
+
+
+    RKObjectMapping *keywordMapping = [RKObjectMapping mappingForClass:[Keywords class]];
+    [keywordMapping mapKeyPathsToAttributes:@"lemma", @"lemma", @"namedEntity", @"namedEntity", nil];
+    [objectManager.mappingProvider setMapping:keywordMapping forKeyPath:@""];
+
+//    RKObjectMapping *feedMapping = [RKObjectMapping mappingForClass:[SIFeed class]];
+//    [feedMapping mapKeyPathsToAttributes:@"feeds", nil];
+//    [keywordMapping mapRelationship:@"feeds" withMapping:feedMapping];
+//    [objectManager.mappingProvider setMapping:feedMapping forKeyPath:@"feeds"];
+//
+//    RKObjectMapping *venueMapping = [RKObjectMapping mappingForClass:[Venue class]];
+//    [venueMapping mapKeyPathsToAttributes:@"id", @"venueID", @"name", @"name", nil];
+//    [objectManager.mappingProvider setMapping:venueMapping forKeyPath:@"response.venues"];
+//
+//    RKObjectMapping *locationMapping = [RKObjectMapping mappingForClass:[Location class]];
+//    [locationMapping mapKeyPathsToAttributes:@"address", @"address", @"city", @"city", @"country", @"country", @"crossStreet", @"crossStreet", @"postalCode", @"postalCode", @"state", @"state", @"distance", @"distance", @"lat", @"lat", @"lng", @"lng", nil];
+//
+//    [venueMapping mapRelationship:@"location" withMapping:locationMapping];
+//    [objectManager.mappingProvider setMapping:locationMapping forKeyPath:@"location"];
+//
+//    RKObjectMapping *statsMapping = [RKObjectMapping mappingForClass:[Stats class]];
+//    [statsMapping mapKeyPathsToAttributes:@"checkinsCount", @"checkins", @"tipCount", @"tips", @"usersCount", @"users", nil];
+//
+//    [venueMapping mapRelationship:@"stats" withMapping:statsMapping];
+//    [objectManager.mappingProvider setMapping:statsMapping forKeyPath:@"stats"];
+ */
