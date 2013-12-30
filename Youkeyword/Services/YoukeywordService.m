@@ -37,16 +37,22 @@
 }
 
 - (RKObjectManager *)configureMappingForObjectManager:(RKObjectManager *)manager {
+
     RKObjectMapping *keywordMapping = [RKObjectMapping mappingForClass:[Keywords class]];
-    [keywordMapping mapKeyPathsToAttributes:@"lemma", @"lemma", @"namedEntity", @"namedEntity",@"categories", @"categories", nil];
+    [keywordMapping mapKeyPathsToAttributes:@"lemma", @"lemma", @"namedEntity", @"namedEntity",@"categories", @"categories",@"meannings",@"meanings",@"searchResponse",@"searchResponse", nil];
     [manager.mappingProvider setMapping:keywordMapping forKeyPath:@""];
 
 
-    /*RKObjectMapping *feedMapping = [RKObjectMapping mappingForClass:[YKMeanings class]];
-    [feedMapping mapKeyPathsToAttributes:@"feeds", nil];
-    [keywordMapping mapRelationship:@"feeds" withMapping:feedMapping];
-    [objectManager.mappingProvider setMapping:feedMapping forKeyPath:@"feeds"];
-*/
+//    RKObjectMapping *keywordMeaningsMapping = [RKObjectMapping mappingForClass:[YKMeanings class]];
+//    [keywordMeaningsMapping mapKeyPathsToAttributes:@"concept",@"concept", nil];
+//
+//    [manager.mappingProvider setMapping:keywordMeaningsMapping forKeyPath:@"meannings"];
+//
+//    [keywordMapping mapRelationship:@"meanings" withMapping:keywordMeaningsMapping];
+
+//    [venueMapping mapRelationship:@"stats" withMapping:statsMapping];
+//    [objectManager.mappingProvider setMapping:statsMapping forKeyPath:@"stats"];
+
     return manager;
 }
 

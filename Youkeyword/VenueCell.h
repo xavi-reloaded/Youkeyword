@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *checkinsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *categoriesLabel;
 @property (strong, nonatomic) IBOutlet UILabel *meaningsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *searchResponseLabel;
 
 @end

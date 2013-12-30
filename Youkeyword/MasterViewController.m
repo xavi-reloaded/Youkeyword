@@ -78,8 +78,14 @@
     cell.nameLabel.text = keywords.lemma;
     NSString *namedEntity = ([keywords.namedEntity isEqualToString:@"NOT_AN_ENTITY"]) ? @"" : keywords.namedEntity;
     cell.namedEntity.text = namedEntity;
-    cell.meaningsLabel.text = keywords.meanings;
+    NSArray *meaningsArray = keywords.meanings;
+
+
+    cell.meaningsLabel.text = [keywords.meanings JSONString];
     cell.categoriesLabel.text = [keywords.categories JSONString];
+    cell.searchResponseLabel.text = [keywords.searchResponse JSONString];
+
+
     return cell;
 }
 

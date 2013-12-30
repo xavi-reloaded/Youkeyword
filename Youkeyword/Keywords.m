@@ -10,6 +10,6 @@
 
 @implementation Keywords
 
-@synthesize lemma,namedEntity;
+@synthesize lemma,namedEntity,categories,meanings,searchResponse;
 
 @end

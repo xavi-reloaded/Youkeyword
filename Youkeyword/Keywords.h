@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *lemma;
 @property (nonatomic, strong) NSString *namedEntity;
 @property (nonatomic, strong) NSArray *categories;
-@property (nonatomic, strong) NSMutableArray *meanings;
-@property (nonatomic, strong) NSMutableArray *searchResponse;
+@property (nonatomic, strong) NSArray *meanings;
+@property (nonatomic, strong) NSArray *searchResponse;
 
 @end

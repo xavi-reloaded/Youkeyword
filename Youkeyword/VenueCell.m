@@ -9,6 +9,6 @@
 #import "VenueCell.h"
 
 @implementation VenueCell
-@synthesize nameLabel, namedEntity, checkinsLabel,categoriesLabel,meaningsLabel;
+@synthesize nameLabel, namedEntity, checkinsLabel,categoriesLabel,meaningsLabel,searchResponseLabel;
 
 @end

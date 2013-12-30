@@ -7,5 +7,5 @@
 
 
 @interface YKMeanings : NSObject
-@property(nonatomic, copy) NSString *concept;
+@property(nonatomic, strong) NSString *concept;
 @end
