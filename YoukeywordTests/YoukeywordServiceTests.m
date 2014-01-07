@@ -62,7 +62,7 @@
 {
     RKObjectManager *objectManager = [self.sut objectManager];
     NSURL *actual = [[objectManager baseURL] baseURL];
-    NSString *expected = @"http://localhost:8080/PLNEngine/service";
+    NSString *expected = @"http://54.213.142.98:8080/PLNEngine/service";
     NSString *formattedActual = [NSString stringWithFormat:@"%@", actual];
     XCTAssertTrue([formattedActual isEqualToString:expected],@"String are not equals %@ %@",formattedActual,expected);
 }
