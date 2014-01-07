@@ -1,8 +1,8 @@
 //
 //  MasterViewController.h
-//  CoffeeShop
+//  YouKeyword
 //
-//  Created by Scott McAlister on 5/1/12.
+//  Created by Xavi on 5/1/12.
 //  Copyright (c) 2012 4 Arrows Media. All rights reserved.
 //
 

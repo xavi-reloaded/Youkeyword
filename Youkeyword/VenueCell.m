@@ -1,8 +1,8 @@
 //
 //  VenueCell.m
-//  CoffeeShop
+//  YouKeyword
 //
-//  Created by Scott McAlister on 5/16/12.
+//  Created by Xavi on 12/26/13.
 //  Copyright (c) 2012 4 Arrows Media. All rights reserved.
 //
 

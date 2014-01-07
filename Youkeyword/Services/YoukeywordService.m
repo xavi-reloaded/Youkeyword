@@ -21,7 +21,7 @@
 
 - (id)init:(NSObject *)delegateClass {
     self.delegateClass = delegateClass;
-    return [self initWithObjectManager:@"http://localhost:8080/PLNEngine/service"];;
+    return [self initWithObjectManager:@"http://54.213.142.98:8080/PLNEngine/service"];;
 }
 
 - (id)initWithObjectManager:(NSString *)baseURLString {
