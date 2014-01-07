@@ -10,10 +10,11 @@
 
 }
 - (NSString *)getBaseURL {
-    return @"http://www.formadisimo.com/ws/";
+    return [self.baseURL stringByAppendingString:@"/ws"];
 }
 
 - (id)initWithCustomURL:(NSString *)string {
+    self.baseURL = string;
     return self;
 }
 @end

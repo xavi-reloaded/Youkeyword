@@ -7,6 +7,9 @@
 
 
 @interface FormadisimoService : NSObject
+
+@property(nonatomic, copy) NSString *baseURL;
+
 - (NSString *)getBaseURL;
 
 - (id)initWithCustomURL:(NSString *)string;

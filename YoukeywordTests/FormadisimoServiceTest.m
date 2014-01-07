@@ -32,10 +32,8 @@
 - (void)test_getBaseURL_nothing_validFormadisimoURL
 {
     self.sut = [[FormadisimoService alloc] initWithCustomURL:@"http://www.formadisimo.com"];
-
     NSString *actual = [self.sut getBaseURL];
-    NSString *expected = @"http://www.formadisimo.com/ws/";
-
+    NSString *expected = @"http://www.formadisimo.com/ws";
     XCTAssertTrue([actual isEqualToString:expected],@"String are not equals %@ %@",actual,expected);
 }
 
