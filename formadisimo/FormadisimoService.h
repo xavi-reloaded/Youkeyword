@@ -8,4 +8,6 @@
 
 @interface FormadisimoService : NSObject
 - (NSString *)getBaseURL;
+
+- (id)initWithCustomURL:(NSString *)string;
 @end
