@@ -73,7 +73,7 @@
     NSString *const language = @"en";
     NSString *const name = @"name";
     NSString *const userId = @"userid";
-    NSDictionary *actual = [self.sut getQueryParams:text language:language name:name userId:userId];
+    NSDictionary *actual = [[self sut] getQueryParams:text language:language name:name userId:userId];
     NSString *formattedActual = [actual objectForKey: @"w"];
     NSString *expected = @"hola";
     XCTAssertTrue([expected isEqualToString:formattedActual],@"String are not equals %@ %@",formattedActual,expected);

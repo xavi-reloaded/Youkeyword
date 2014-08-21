@@ -48,7 +48,7 @@
 //
 //    [manager.mappingProvider setMapping:keywordMeaningsMapping forKeyPath:@"meannings"];
 //
-//    [keywordMapping mapRelationship:@"meanings" withMapping:keywordMeaningsMapping];
+//    [keywordMapping mapRelationship:@"meæanings" withMapping:keywordMeaningsMapping];
 
 //    [venueMapping mapRelationship:@"stats" withMapping:statsMapping];
 //    [objectManager.mappingProvider setMapping:statsMapping forKeyPath:@"stats"];
